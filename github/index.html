@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  
+</head>
+
+<body>
+ 
+   Examens de septembre
+ 
+Dossier	
+Nom	
+Prénom	
+MAT1
+DEV1
+DEV2
+WEBG2
+
+Nombre d'éléments inférieurs à 10 dans MAT1 : 
+Nombre d'éléments inférieurs à 10 dans DEV1 : 
+Nombre d'éléments inférieurs à 10 dans DEV2 : 
+Nombre d'éléments inférieurs à 10 dans WEBG2 :
+
+Pour les boutons 
+MAT1 inférieure à 10 
+DEV1 inférieure à 10 
+DEV2 inférieure à 10 
+WEBG2 inférieure à 10
+
+   
+      
+  <script>
+    fetch('https://git.esi-bru.be/api/v4/projects/44545/repository/files/jsonData.json/raw')
+      .then(response => response.json())
+      .then(loading)
+      .catch(alert);
+
+    function loading(notesJuin) {
+    console.table(notesJuin)
+    }
+  </script>
+</body>
+
+</html>
