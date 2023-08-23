@@ -2,34 +2,65 @@
 <html>
 
 <head>
-  <title></title>
+   <link rel="stylesheet" href="styles/style.css">
+  <title>Examen de septembre</title>
   
 </head>
 
 <body>
  
-   Examens de septembre
- 
-Dossier	
-Nom	
-Prénom	
-MAT1
-DEV1
-DEV2
-WEBG2
+   <header id="main-header">
+      <h1>Examen de septembre</h1>
+      
+   </header>
 
-Nombre d'éléments inférieurs à 10 dans MAT1 : 
-Nombre d'éléments inférieurs à 10 dans DEV1 : 
-Nombre d'éléments inférieurs à 10 dans DEV2 : 
-Nombre d'éléments inférieurs à 10 dans WEBG2 :
-
-Pour les boutons 
-MAT1 inférieure à 10 
-DEV1 inférieure à 10 
-DEV2 inférieure à 10 
-WEBG2 inférieure à 10
-
+   <section>
+      <table>
+         <thead>
+            <tr>
+               <th>Dossier</th>
+               <th>Nom</th>
+               <th>Prénom</th>
+               <th>MAT1</th>
+               <th>DEV1</th>
+               <th>DEV2</th>
+               <th>WEBG2</th>
+            </tr>
+         </thead>
+         <tbody>
    
+         </tbody>
+         <tfoot>
+            <tr>
+               <td colspan="3"></td>
+               <td>Nombre d'élements inférieurs a 10 dans MAT1: </td>
+
+               <td>Nombre d'élements inférieurs a 10 dans DEV1: </td>
+
+               <td>Nombre d'élements inférieurs a 10 dans DEV2:</td>
+
+               <td>Nombre d'élements inférieurs a 10 dans WEBG2: </td>
+            </tr>
+         </tfoot>
+      </table>
+   </section>
+   
+
+<section id="results-section">
+   <h2>Résultats: </h2>
+   <textarea rows="32" cols="60"></textarea>
+</section>
+
+<section>
+   <button>MAT1 inférieure a 10</button>
+   <button>DEV1 inférieur a 10</button>
+   <button>DEV2 inférieur a 10</button>
+   <button>WEBG2 inférieur a 10</button>
+</section>
+
+<footer id="main-footer">
+   58429 Ben Baiad Ilias
+</footer>
       
   <script>
     fetch('https://git.esi-bru.be/api/v4/projects/44545/repository/files/jsonData.json/raw')
