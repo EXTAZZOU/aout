@@ -3,15 +3,16 @@
 
 <head>
    <link rel="stylesheet" href="styles/style.css">
-  <title>Examen de septembre</title>
-  
+   <script src="scripts.js" defer></script>
+   <title>Examen de septembre</title>
+
 </head>
 
 <body>
- 
+
    <header id="main-header">
       <h1>Examen de septembre</h1>
-      
+
    </header>
 
    <section>
@@ -28,7 +29,7 @@
             </tr>
          </thead>
          <tbody>
-   
+
          </tbody>
          <tfoot>
             <tr>
@@ -44,34 +45,34 @@
          </tfoot>
       </table>
    </section>
-   
 
-<section id="results-section">
-   <h2>Résultats: </h2>
-   <textarea rows="32" cols="60"></textarea>
-</section>
 
-<section>
-   <button>MAT1 inférieure a 10</button>
-   <button>DEV1 inférieur a 10</button>
-   <button>DEV2 inférieur a 10</button>
-   <button>WEBG2 inférieur a 10</button>
-</section>
+   <section id="results-section">
+      <h2>Résultats: </h2>
+      <textarea rows="32" cols="60"></textarea>
+   </section>
 
-<footer id="main-footer">
-   58429 Ben Baiad Ilias
-</footer>
-      
-  <script>
-    fetch('https://git.esi-bru.be/api/v4/projects/44545/repository/files/jsonData.json/raw')
-      .then(response => response.json())
-      .then(loading)
-      .catch(alert);
+   <section>
+      <button>MAT1 inférieure a 10</button>
+      <button>DEV1 inférieur a 10</button>
+      <button>DEV2 inférieur a 10</button>
+      <button>WEBG2 inférieur a 10</button>
+   </section>
 
-    function loading(notesJuin) {
-    console.table(notesJuin)
-    }
-  </script>
+   <footer id="main-footer">
+      58429 Ben Baiad Ilias
+   </footer>
+
+   <script>
+      fetch('https://git.esi-bru.be/api/v4/projects/44545/repository/files/jsonData.json/raw')
+         .then(response => response.json())
+         .then(loading)
+         .catch(alert);
+
+      function loading(notesJuin) {
+         console.table(notesJuin)
+      }
+   </script>
 </body>
 
 </html>
